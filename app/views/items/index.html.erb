@@ -1,0 +1,13 @@
+<h2>Items in Inventory</h2>
+
+<% @items.each do |item| %>
+<div class="row">
+  <div class="span4">
+    <%= image_tag item.picture_url, :width => '100%' if item.picture.present?%>
+    <h4><%= link_to item.name, item %></h4>
+    <b>Model: </b><%= item.product_model_number %><br>
+    <b>Quantity: </b><%= item.quantity %>
+  </div>
+<% end %>
+
+<br />

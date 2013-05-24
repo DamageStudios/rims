@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rims</title>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
+
+  <%= yield %>
+</div>
+
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <a class="brand" href="/">Rails Inventory Management Software</a>
+      <ul class="nav">
+        <li class="active"><a href="/items">Items</a></li>
+        <li ><%= link_to 'New Item', new_item_path %></li>
+      </ul>
+
+      <p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Rails Inventory Management Software - RIMS &copy; 2013
+  </div>
+</footer>
+
+</body>
+</html>

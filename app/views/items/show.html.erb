@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="span9">
+    <%= image_tag(@item.picture_url, :width => "100%") if @item.picture.present? %>
+  </div>
+
+  <div class="span3">
+    <p><b>Name: </b><%= @item.name %></p>
+    <p><b>Description: </b><%= @item.description %></p>
+    <p><b>Product model number: </b><%= @item.product_model_number %></p>
+    <p><b>Vendor: </b><%= @item.vendor %></p>
+    <p><b>Quantity: </b><%= @item.quantity %></p>        
+    <p><b>Unit Value: </b><%= @item.unit_value %></p>
+    <p><b>Value: </b><%= @item.value %></p>
+    <p><b>URL: </b><%= @item.url %></p>            
+    <p><b>Location: </b><%= @item.location %></p>
+    <p>
+      <%= link_to 'Edit', edit_item_path(@item) %> |
+      <%= link_to 'Destroy', @item, confirm: 'Are you sure?', method: :delete %> |
+      <%= link_to 'Back', items_path %>
+    </p>
+  </div>
+</div>
