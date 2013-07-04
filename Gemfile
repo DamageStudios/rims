@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
+gem "seed_dump", "~> 0.5.3"
 
 # Gems used only for assets and not required
 # in production environments by default.
