@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  
   # GET /items
   # GET /items.json
   def index
@@ -14,6 +15,8 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
+
+    @qr = RQRCode::QRCode.new( @item.name + " \nQuantity: " + @item.quantity,  :size=> 2, :level => :l, :unit => 10 )
 
     respond_to do |format|
       format.html # show.html.erb
