@@ -6,8 +6,8 @@ class CreateItems < ActiveRecord::Migration
       t.text :product_model_number
       t.string :vendor
       t.string :quantity
-      t.integer :unit_value
-      t.integer :value
+      t.decimal :unit_value, :precision => 10, :scale => 2, :default => 0.0
+      t.decimal :value, :precision => 10, :scale => 2, :default => 0.0
       t.string :picture
       t.string :url
       t.string :location
