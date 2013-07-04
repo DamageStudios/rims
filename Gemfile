@@ -9,12 +9,9 @@ gem 'sqlite3'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
-<<<<<<< HEAD
 gem 'rqrcode-rails3'
-=======
 gem 'twitter-bootstrap-rails'
 gem "seed_dump", "~> 0.5.3"
->>>>>>> 16b93256929a724efd5c90f082cb4cd86245859f
 
 # Gems used only for assets and not required
 # in production environments by default.
