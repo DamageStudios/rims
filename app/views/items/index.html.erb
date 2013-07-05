@@ -3,7 +3,7 @@
 <% @items.each do |item| %>
 <div class="row">
   <div class="span4">
-    <%= image_tag item.picture_url, :width => '100%' if item.picture.present?%>
+    <%= image_tag item.picture_url(:thumb) if item.picture? %>
     <h4><%= link_to item.name, item %></h4>
     <b>Model: </b><%= item.product_model_number %><br>
     <b>Quantity: </b><%= item.quantity %>

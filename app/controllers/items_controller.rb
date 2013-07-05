@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
 
-    @qr = RQRCode::QRCode.new( @item.name + " \nQuantity: " + @item.quantity,  :size=> 2, :level => :l, :unit => 10 )
+    @qr = RQRCode::QRCode.new( @item.name + " \nQuantity: " + @item.quantity,  :size=> 4, :level => :l, :unit => 10 )
 
     respond_to do |format|
       format.html # show.html.erb

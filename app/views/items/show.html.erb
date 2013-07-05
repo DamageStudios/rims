@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="span9">
-    <%= image_tag(@item.picture_url, :width => "100%") if @item.picture.present? %>
+  <div class="span6">
+    <%= image_tag(@item.picture_url, :width => "25%") if @item.picture.present? %>
   </div>
 
   <div class="span3">
@@ -10,6 +10,7 @@
     <p><b>Description: </b><%= @item.description %></p>
     <p><b>Product model number: </b><%= @item.product_model_number %></p>
     <p><b>Vendor: </b><%= @item.vendor %></p>
+    <p><b>Vendor Part Number: </b><%= @item.part_number %></p>
     <p><b>Quantity: </b><%= @item.quantity %></p>        
     <p><b>Unit Value: </b><%= @item.unit_value %></p>
     <p><b>Value: </b><%= @item.value %></p>
