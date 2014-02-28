@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  
+
   # GET /items
   # GET /items.json
   def index
@@ -15,8 +15,6 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
-
-    @qr = RQRCode::QRCode.new( @item.name + " \nQuantity: " + @item.quantity,  :size=> 4, :level => :l, :unit => 10 )
 
     respond_to do |format|
       format.html # show.html.erb
@@ -44,7 +42,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(params[:item])
-    
+
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
