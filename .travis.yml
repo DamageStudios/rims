@@ -1,5 +1,5 @@
 language: ruby
-script: 'bundle exec rake db:create && rake db:migrate'
+script: 'bundle exec rake db:create && rake db:migrate && bundle exec rspec spec/'
 rvm:
   - 2.0.0
 env:
