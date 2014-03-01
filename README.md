@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/fusion94/rims.png?branch=master)](https://travis-ci.org/fusion94/rims)
+[![Coverage Status](https://coveralls.io/repos/fusion94/rims/badge.png)](https://coveralls.io/r/fusion94/rims)
 [![Dependency Status](https://gemnasium.com/fusion94/rims.png)](https://gemnasium.com/fusion94/rims)
 [![Code Climate](https://codeclimate.com/github/fusion94/rims.png)](https://codeclimate.com/github/fusion94/rims)
 
