@@ -3,7 +3,6 @@
 [![Dependency Status](https://gemnasium.com/fusion94/rims.png)](https://gemnasium.com/fusion94/rims)
 [![Code Climate](https://codeclimate.com/github/fusion94/rims.png)](https://codeclimate.com/github/fusion94/rims)
 
-
 ### Rails Inventory Management System (RIMS).
 
 RIMS is an Open Source Inventory Management System designed primarily to keep track of electronic parts and components. It will allow you to keep track of your available parts and assist you with re-ordering parts.
