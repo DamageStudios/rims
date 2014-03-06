@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '~> 4.0.3'
 
 gem 'protected_attributes'
 gem 'sqlite3'
@@ -10,6 +10,8 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem "seed_dump"
 gem 'coveralls'
+gem 'cancan'
+gem 'role_model'
 
 # Gems used only for assets and not required
 # in production environments by default.
