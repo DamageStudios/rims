@@ -17,3 +17,7 @@ This project is currently in an early alpha stage. Code quality is improving con
 `rake db:create && rake db:migrate`
 
 `rails s`
+
+***You might receive an error when trying to upload an image to RIMS. If so make sure you have installed imagemagick.***
+
+Using Homebrew on OSX it's as easy as: `brew install imagemagick`
