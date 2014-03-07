@@ -1,7 +1,7 @@
 <%= form_for(@item) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <h3><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h3>
 
       <ul>
       <% @item.errors.full_messages.each do |msg| %>
@@ -12,47 +12,47 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :product_model_number %><br />
+    <%= f.label :product_model_number %>
     <%= f.text_field :product_model_number %>
   </div>
   <div class="field">
-    <%= f.label :vendor %><br />
+    <%= f.label :vendor %>
     <%= f.text_field :vendor %>
   </div>
     <div class="field">
-    <%= f.label :part_number %><br />
+    <%= f.label :part_number %>
     <%= f.text_field :part_number %>
   </div>
   <div class="field">
-    <%= f.label :quantity %><br />
+    <%= f.label :quantity %>
     <%= f.text_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :unit_value %><br />
+    <%= f.label :unit_value %>
     <%= f.text_field :unit_value %>
   </div>
   <div class="field">
-    <%= f.label :value %><br />
+    <%= f.label :value %>
     <%= f.text_field :value %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br />
+    <%= f.label :picture %>
     <%= f.file_field :picture %>
   </div>
   <div class="field">
-    <%= f.label :url %><br />
+    <%= f.label :url %>
     <%= f.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :location %><br />
+    <%= f.label :location %>
     <%= f.text_field :location %>
   </div>
   <div class="actions">
