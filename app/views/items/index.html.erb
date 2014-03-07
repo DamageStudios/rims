@@ -1,13 +1,18 @@
 <h3>Items in Inventory</h3>
 
-<% @items.each do |item| %>
 <div class="row">
-  <div class="span4">
-    <%= image_tag item.picture_url(:thumb) if item.picture? %>
-    <h4><%= link_to item.name, item %></h4>
-    <b>Model: </b><%= item.product_model_number %><br>
-    <b>Quantity: </b><%= item.quantity %>
-  </div>
-<% end %>
+  <table class="table table-striped">
+    <th>Item Name</th>
+    <th>Model</th>
+    <th>Quantity</th>
 
-<br />
+    <% @items.each do |item| %>
+    <tr>
+    <td><%= link_to item.name, item %></td>
+    <td><%= item.product_model_number %></td>
+    <td><%= item.quantity %></td>
+    </tr>
+    <% end -%>
+
+  </table>
+</div>
