@@ -12,50 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :product_model_number %>
-    <%= f.text_field :product_model_number %>
-  </div>
-  <div class="field">
-    <%= f.label :vendor %>
-    <%= f.text_field :vendor %>
-  </div>
-    <div class="field">
-    <%= f.label :part_number %>
-    <%= f.text_field :part_number %>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity %>
-  </div>
-  <div class="field">
+    <%= f.text_field :name, :placeholder => 'Item Name'%><br>
+    <%= f.text_area :description, :rows => 10, :placeholder => 'Item Description'%><br>
+    <%= f.text_field :product_model_number, :placeholder => 'Product Model Number' %><br>
+    <%= f.text_field :vendor, :placeholder => 'Vendor' %><br>
+    <%= f.text_field :part_number, :placeholder => 'Part Number' %><br>
+    <%= f.text_field :quantity, :placeholder => 'Quantity' %><br>
+    <%= f.text_field :url, :placeholder => 'Vendor URL' %><br>
+    <%= f.text_field :location, :placeholder => 'Storage Location' %><br>
     <%= f.label :unit_value %>
-    <%= f.text_field :unit_value %>
-  </div>
-  <div class="field">
+    <%= f.text_field :unit_value, :placeholder => 'Unit Value' %><br>
     <%= f.label :value %>
-    <%= f.text_field :value %>
-  </div>
-  <div class="field">
+    <%= f.text_field :value, :placeholder => 'Value' %><br>
     <%= f.label :picture %>
     <%= f.file_field :picture %>
   </div>
-  <div class="field">
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Sign in",  :class => "btn  btn-primary" %>
   </div>
 <% end %>
