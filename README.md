@@ -14,9 +14,16 @@ This project is currently in an early alpha stage. Code quality is improving con
 
 `bundle install`
 
-`rake db:create && rake db:migrate`
+`rake db:create && rake db:migrate && rake db:seed`
 
 `rails s`
+
+This will install all the gem dependencies for you, create a local database, run the database migrations and seed the database with some default items. It will also create a user for you to login as. The credentials for this user are:
+
+```
+username: admin@example.com
+password: changeme
+```
 
 ***You might receive an error when trying to upload an image to RIMS. If so make sure you have installed imagemagick.***
 
