@@ -3,14 +3,20 @@
 <div class="row">
   <table class="table table-striped">
     <th>Item Name</th>
-    <th>Model</th>
-    <th>Quantity</th>
+    <th><center>Model</center></th>
+    <th><center>Quantity</center></th>
+    <th><center>Vendor</center></th>
+    <th><center>Location</center></th>
+    <th><center>Edit/Delete</center></th>
 
     <% @items.each do |item| %>
     <tr>
     <td><%= link_to item.name, item %></td>
-    <td><%= item.product_model_number %></td>
-    <td><%= item.quantity %></td>
+    <td><center><%= item.product_model_number %></center></td>
+    <td><center><%= item.quantity %></center></td>
+    <td><center><%= item.vendor %></center></td>
+    <td><center><%= item.location %></center></td>
+    <td><center><%= link_to 'Edit', edit_item_path(item) %> | <%= link_to 'Delete', item, confirm: 'Are you sure you want to delete this item?', method: :delete %></center></td>
     </tr>
     <% end -%>
 
