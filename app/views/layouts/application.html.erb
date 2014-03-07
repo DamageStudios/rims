@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= render partial: 'shared/header' %>
+
 <div class="container">
   <% if notice %>
   <p class="alert alert-notice"><%= notice %></p>
@@ -19,40 +21,13 @@
   <%= yield %>
 </div>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="/">Rails Inventory Management Software</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li ><%= link_to 'New Item', new_item_path %></li>
-              <li><a href="#about">About</a></li>
-            </ul>
-            <p class="navbar-text pull-right">
-              <% if user_signed_in? %>
-                Logged in as <strong><%= current_user.email %></strong>.
-                <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-              <% else %>
-                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-              <% end %>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
 
-<footer>
-  <div class="container">
-    Rails Inventory Management Software - RIMS &copy; 2013-2014
-  </div>
-</footer>
+
+
+
+
+
+<%= render partial: 'shared/footer' %>
 
 </body>
 </html>
