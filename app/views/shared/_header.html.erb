@@ -1,3 +1,4 @@
+
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -6,12 +7,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/">Rails Inventory Management Software</a>
+          <a class="brand" href="/">RIMS</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li ><%= link_to 'New Item', new_item_path %></li>
-              <li><a href="#about">About</a></li>
+              <li class="active">
+                <a href="/">Home</a>
+              </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="items">Inventory <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="items">
+                <li><%= link_to 'All Items', items_path %></li>
+                <li><%= link_to 'New Item', new_item_path %></li>
+              </ul>
+            </li>
             </ul>
             <p class="navbar-text pull-right">
               <% if user_signed_in? %>
@@ -22,7 +30,7 @@
                 <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
                 <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
               <% end %>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
-    </div>  
+    </div>
