@@ -6,7 +6,7 @@
     <p><b>Product model number: </b><%= @item.product_model_number %></p>
     <p><b>Vendor: </b><%= @item.vendor %></p>
     <p><b>Vendor Part Number: </b><%= @item.part_number %></p>
-    <p><b>Vendor URL: </b><%= link_to(@item.url) %></p>
+    <p><b>Vendor URL: </b><%= link_to(@item.url, @item.url) %></p>
     <p><b>Quantity: </b><%= @item.quantity %></p>
     <p><b>Unit Value: </b><%= @item.unit_value %></p>
     <p><b>Value: </b><%= @item.value %></p>
