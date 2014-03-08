@@ -2,7 +2,7 @@
 <div class="hero-unit">
     <h3><%= @item.name %></h3>
     <%= image_tag(@item.picture_url, :width => "75%") if @item.picture.present? %>
-    <p><b>Description: </b><%= @item.description %></p>
+    <p><b>Description: </b><%= simple_format(@item.description) %></p>
     <p><b>Product model number: </b><%= @item.product_model_number %></p>
     <p><b>Vendor: </b><%= @item.vendor %></p>
     <p><b>Vendor Part Number: </b><%= @item.part_number %></p>
