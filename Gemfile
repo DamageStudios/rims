@@ -11,7 +11,8 @@ gem "seed_dump"
 gem 'coveralls'
 gem 'cancan'
 gem 'role_model'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
