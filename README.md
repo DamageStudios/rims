@@ -28,3 +28,6 @@ password: changeme
 ***You might receive an error when trying to upload an image to RIMS. If so make sure you have installed imagemagick.***
 
 Using Homebrew on OSX it's as easy as: `brew install imagemagick`
+
+### Screenshot
+![alt text](https://raw.github.com/fusion94/rims/master/RIMS.png "RIMS Screenshot")
