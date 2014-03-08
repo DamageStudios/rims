@@ -1,49 +1,19 @@
-<p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="span6">
-    <%= image_tag(@item.picture_url, :width => "25%") if @item.picture.present? %>
-  </div>
-
-  <div class="span3">
-    <p><b>Name: </b><%= @item.name %></p>
+<div class="hero-unit">
+    <h3><%= @item.name %></h3>
+    <%= image_tag(@item.picture_url, :width => "75%") if @item.picture.present? %>
     <p><b>Description: </b><%= @item.description %></p>
     <p><b>Product model number: </b><%= @item.product_model_number %></p>
     <p><b>Vendor: </b><%= @item.vendor %></p>
     <p><b>Vendor Part Number: </b><%= @item.part_number %></p>
+    <p><b>Vendor URL: </b><%= link_to(@item.url) %></p>
     <p><b>Quantity: </b><%= @item.quantity %></p>
     <p><b>Unit Value: </b><%= @item.unit_value %></p>
     <p><b>Value: </b><%= @item.value %></p>
-    <p><b>URL: </b><%= @item.url %></p>
     <p><b>Location: </b><%= @item.location %></p>
 
-<style type="text/css">
-table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
-  width:100px;
-  height: 100px;
-}
-td {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
-  padding: 0;
-  margin: 0;
-  width: 1px;
-  height: 1px;
-}
-td.black { background-color: #000; }
-td.white { background-color: #fff; }
-</style>
-
     <p>
-      <%= link_to 'Edit', edit_item_path(@item) %> |
-      <%= link_to 'Delete', @item, confirm: 'Are you sure?', method: :delete %> |
-      <%= link_to 'Back', items_path %>
+      <%= link_to 'Edit', edit_item_path(@item) %> | <%= link_to 'Delete', @item, confirm: 'Are you sure?', method: :delete %> | <%= link_to 'Back', items_path %>
     </p>
-  </div>
+
 </div>

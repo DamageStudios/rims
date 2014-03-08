@@ -15,7 +15,7 @@
     <td><center><%= item.quantity %></center></td>
     <td><center><%= item.vendor %></center></td>
     <td><center><%= item.location %></center></td>
-    <td><center><%= link_to '', edit_item_path(item), :class=>"fa fa-edit" %> |  <%= link_to content_tag(:i,nil, :class=>"fa fa-trash-o"), item, confirm: 'Are you sure you want to delete this item?', method: :delete %></center>
+    <td><center><%= link_to '', edit_item_path(item), :class=>"fa fa-edit" %> |  <%= link_to content_tag(:i,nil, :class=>"fa fa-trash-o"), item, data: {confirm: 'Are you sure you want to delete this item?'}, method: :delete %></center>
 </td>
     </tr>
     <% end -%>
