@@ -24,6 +24,9 @@ This will install all the gem dependencies for you, create a local database, run
 username: admin@example.com
 password: changeme
 ```
+If you want to run unit tests you can do so by running the following command:
+
+`bundle exec rspec spec/`
 
 ***You might receive an error when trying to upload an image to RIMS. If so make sure you have installed imagemagick.***
 
@@ -31,5 +34,3 @@ Using Homebrew on OSX it's as easy as: `brew install imagemagick`
 
 ### Screenshot
 ![alt text](https://raw.github.com/fusion94/rims/master/RIMS.png "RIMS Screenshot")
-
-bundle exec rspec spec/
