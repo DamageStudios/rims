@@ -9,7 +9,7 @@
     <p><b>Vendor URL: </b><%= link_to(@item.url, @item.url, :target => "_blank") %></p>
     <p><b>Quantity: </b><%= @item.quantity %></p>
     <p><b>Unit Value: </b><%= number_to_currency(@item.unit_value, :unit => "$")  %></p>
-    <p><b>Value: </b><%= @item.value %></p>
+    <p><b>Total Value: </b><%= @item.value %></p>
     <p><b>Location: </b><%= @item.location %></p>
 
     <p>
