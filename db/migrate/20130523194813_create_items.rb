@@ -7,8 +7,8 @@ class CreateItems < ActiveRecord::Migration
       t.string :part_number
       t.string :vendor
       t.string :quantity
-      t.decimal :unit_value, :precision => 10, :scale => 2
-      t.decimal :value, :precision => 10, :scale => 2
+      t.decimal :unit_value
+      t.decimal :value
       t.string :picture
       t.text :url
       t.string :location

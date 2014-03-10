@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20130524132945) do
     t.string   "part_number"
     t.string   "vendor"
     t.string   "quantity"
-    t.decimal  "unit_value",           precision: 10, scale: 2
-    t.decimal  "value",                precision: 10, scale: 2
+    t.decimal  "unit_value"
+    t.decimal  "value"
     t.string   "picture"
     t.text     "url"
     t.string   "location"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20130524132945) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                              null: false
+    t.string   "encrypted_password",                 null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
