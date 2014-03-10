@@ -18,12 +18,8 @@ This project is currently in an early alpha stage. Code quality is improving con
 
 `rails s`
 
-This will install all the gem dependencies for you, create a local database, run the database migrations and seed the database with some default items. It will also create a user for you to login as. The credentials for this user are:
+This will install all the gem dependencies for you, create a local database, run the database migrations and seed the database with some default items.
 
-```
-username: admin@example.com
-password: changeme
-```
 If you want to run unit tests you can do so by running the following command:
 
 `bundle exec rspec spec/`
