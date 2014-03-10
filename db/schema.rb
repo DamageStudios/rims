@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130524132945) do
     t.text     "product_model_number"
     t.string   "part_number"
     t.string   "vendor"
-    t.string   "quantity"
+    t.integer  "quantity"
     t.decimal  "unit_value"
     t.decimal  "value"
     t.string   "picture"
