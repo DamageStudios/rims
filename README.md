@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/fusion94/rims.png?branch=master)](https://travis-ci.org/fusion94/rims)
-[![Coverage Status](https://coveralls.io/repos/fusion94/rims/badge.png)](https://coveralls.io/r/fusion94/rims)
-[![Dependency Status](https://gemnasium.com/fusion94/rims.png)](https://gemnasium.com/fusion94/rims)
-[![Code Climate](https://codeclimate.com/github/fusion94/rims.png)](https://codeclimate.com/github/fusion94/rims)
+[![Build Status](https://travis-ci.org/DamageStudios/rims.png?branch=master)](https://travis-ci.org/DamageStudios/rims)
+[![Coverage Status](https://coveralls.io/repos/DamageStudios/rims/badge.png)](https://coveralls.io/r/DamageStudios/rims)
+[![Dependency Status](https://gemnasium.com/DamageStudios/rims.png)](https://gemnasium.com/DamageStudios/rims)
+[![Code Climate](https://codeclimate.com/github/DamageStudios/rims.png)](https://codeclimate.com/github/DamageStudios/rims)
 
 ### Rails Inventory Management System (RIMS).
 
