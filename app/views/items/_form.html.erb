@@ -22,10 +22,13 @@
     <%= f.text_field :location, :placeholder => 'Storage Location' %><br>
     <%= f.label :unit_value %>
     <%= f.text_field :unit_value, :placeholder => 'Unit Value' %><br>
-    <%= f.label :value %>
-    <%= f.text_field :value, :placeholder => 'Value' %><br>
     <%= f.label :picture %>
     <%= f.file_field :picture %>
+
+    
+    <%= f.hidden_field :picture_url, :value => @item.picture_url %>
+
+
   </div>
 
   <div class="actions">

@@ -10,6 +10,7 @@ class CreateItems < ActiveRecord::Migration
       t.decimal :unit_value
       t.decimal :value
       t.string :picture
+      t.string :picture_url
       t.text :url
       t.string :location
 
