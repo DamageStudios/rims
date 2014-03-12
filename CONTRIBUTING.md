@@ -53,8 +53,7 @@ of keeping on top of things.
 At this point you're waiting on us. We like to at least comment on, if not accept, pull requests within three business
 days (and, typically, one business day). We may suggest some changes or improvements or alternatives.
 
-# Additional Resources
-* More information on contributing
+# Additional Resources - More information on contributing
 * [Issue tracker](https://github.com/DamageStudios/rims/issues)
 * [Contributor License Agreement](http://www.clahub.com/agreements/DamageStudios/rims)
 * [General GitHub documentation](http://help.github.com/)
