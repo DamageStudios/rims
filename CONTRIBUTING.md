@@ -1,7 +1,7 @@
 # Introduction
 Since RIMS is a fully open-source app, we would appreciate if you dive in and start adding features, fixing bugs, and cleaning up the code.
 
-If you’re going to contribute code then we need you to sign our [Contributor License Agreement](http://www.clahub.com/agreements/DamageStudios/RIMS)
+If you’re going to contribute code then we need you to sign our [Contributor License Agreement](http://www.clahub.com/agreements/DamageStudios/rims)
 (hereafter referred to as CLA) which is modeled after the one that [NodeJS](http://nodejs.org) uses.
 
 A CLA is a legal document in which you state you are entitled to contribute the code/documentation/translation
