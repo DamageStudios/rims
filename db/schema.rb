@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20130524132945) do
     t.decimal  "unit_value"
     t.decimal  "value"
     t.string   "picture"
-    t.string   "picture_url"
     t.text     "url"
     t.string   "location"
     t.datetime "created_at"
