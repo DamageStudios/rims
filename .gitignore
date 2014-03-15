@@ -16,3 +16,5 @@
 
 # Ignore coverage
 coverage/
+
+public/uploads/tmp/
