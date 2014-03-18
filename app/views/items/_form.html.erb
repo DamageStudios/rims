@@ -22,6 +22,7 @@
     <%= f.text_field :location, :placeholder => 'Storage Location' %><br>
     <%= f.label :unit_value %>
     <%= f.text_field :unit_value, :placeholder => 'Unit Value' %><br>
+    <%= f.select :category, [ 'Arduino', 'BeagleBone', 'Raspberry Pi' ], :prompt => 'Select A Category' %>
     <%= f.label :picture %>
     <%= f.file_field :picture %>
   </div>

@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20130524132945) do
     t.decimal  "value"
     t.string   "picture"
     t.text     "url"
+    t.text     "category"
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"

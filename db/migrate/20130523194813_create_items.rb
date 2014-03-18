@@ -11,6 +11,7 @@ class CreateItems < ActiveRecord::Migration
       t.decimal :value
       t.string :picture
       t.text :url
+      t.text :category
       t.string :location
 
       t.timestamps
