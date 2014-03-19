@@ -2,6 +2,8 @@ class Item < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   attr_accessible :description, :location, :name, :picture, :product_model_number, :part_number, :quantity, :unit_value, :url, :value, :vendor, :category
 
+self.per_page = 5
+
 belongs_to :item
 after_save :update_value
 protected

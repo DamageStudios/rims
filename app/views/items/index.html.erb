@@ -1,3 +1,5 @@
+<% @items = Item.paginate(:page => params[:page]) %>
+
 <h3>Items in Inventory</h3>
 <div class="row">
   <table class="table table-striped">
@@ -25,3 +27,10 @@
     <% end -%>
   </table>
 </div>
+
+<div class="pagination">
+    <div class="page_info">
+      <%= page_entries_info @items %>
+    </div>
+    <%= will_paginate @items, :container => false %>
+  </div>
