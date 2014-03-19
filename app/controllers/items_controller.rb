@@ -1,15 +1,11 @@
 class ItemsController < ApplicationController
   before_filter :authenticate_user!
-
+  respond_to :html, :json
   # GET /items
   # GET /items.json
   def index
     @items = Item.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @items }
-    end
+    respond_with(@items)
   end
 
   # GET /items/1
