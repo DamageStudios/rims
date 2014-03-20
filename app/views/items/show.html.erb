@@ -4,9 +4,9 @@
     <%= image_tag(@item.picture_url, :width => "75%") if @item.picture.present? %>
     <p><b>Description: </b><%= simple_format(@item.description) %></p>
     <p><b>Product model number: </b><%= @item.product_model_number %></p>
-    <p><b>Vendor: </b><%= @item.vendor %></p>
-    <p><b>Vendor Part Number: </b><%= @item.part_number %></p>
-    <p><b>Vendor URL: </b><%= link_to(@item.url, @item.url, :target => "_blank") %></p>
+    <p><b>Vendor: </b><%= @item.vendor_name %></p>
+    <p><b>Vendor Part Number: </b><%= @item.vendor_part_number %></p>
+    <p><b>Vendor URL: </b><%= link_to(@item.vendor_url, @item.vendor_url, :target => "_blank") %></p>
     <p><b>Quantity: </b><%= @item.quantity %></p>
     <p><b>Unit Value: </b><%= number_to_currency(@item.unit_value, :unit => "$")  %></p>
     <p><b>Total Value: </b><%= number_to_currency(@item.value, :unit => "$") %></p>
