@@ -12,22 +12,68 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name, :placeholder => 'Item Name'%><br>
-    <%= f.text_area :description, :rows => 10, :placeholder => 'Item Description'%><br>
-    <%= f.text_field :product_model_number, :placeholder => 'Product Model Number' %><br>
-    <%= f.text_field :vendor_name, :placeholder => 'Vendor' %><br>
-    <%= f.text_field :vendor_part_number, :placeholder => 'Part Number' %><br>
-    <%= f.text_field :quantity, :placeholder => 'Quantity' %><br>
-    <%= f.text_field :vendor_url, :placeholder => 'Vendor URL' %><br>
-    <%= f.text_field :location, :placeholder => 'Storage Location' %><br>
-    <%= f.label :unit_value %>
-    <%= f.text_field :unit_value, :placeholder => 'Unit Value' %><br>
-    <%= f.select :category, [ 'Arduino', 'BeagleBone', 'Raspberry Pi' ], :prompt => 'Select A Category' %>
-    <%= f.label :picture %>
-    <%= f.file_field :picture %>
+    <table>
+      <tr>
+        <td><b>Product Name:</b></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+
+      <tr>
+        <td><b>Description:</b></td>
+        <td><%= f.text_area :description, :rows => 10 %></td>
+      </tr>
+
+      <tr>
+        <td><b>Product Model Number:</b></td>
+        <td><%= f.text_field :product_model_number %></td>
+      </tr>
+
+      <tr>
+        <td><b>Product Vendor:</b></td>
+        <td><%= f.text_field :vendor_name %></td>
+      </tr>
+
+      <tr>
+        <td><b>Vendor Part Number:</b></td>
+        <td><%= f.text_field :vendor_part_number %></td>
+      </tr>
+
+      <tr>
+        <td><b>Quantity:</b></td>
+        <td><%= f.text_field :quantity %></td>
+      </tr>
+
+      <tr>
+        <td><b>Vendor URL:</b></td>
+        <td><%= f.text_field :vendor_url %></td>
+      </tr>
+
+      <tr>
+        <td><b>Storage Location:</b></td>
+        <td><%= f.text_field :location %></td>
+      </tr>
+
+      <tr>
+        <td><b>Unit Value:</b></td>
+        <td><%= f.text_field :unit_value %></td>
+      </tr>
+
+      <tr>
+        <td><b>Category:</b></td>
+        <td><%= f.select :category, [ 'Arduino', 'BeagleBone', 'Raspberry Pi' ] %></td>
+      </tr>
+
+      <tr>
+        <td><b>Product Photo:</b></td>
+        <td><%= f.file_field :picture %></td>
+      </tr>
+
+    </table>
+
   </div>
 
   <div class="actions">
     <%= f.submit "Create Item",  :class => "btn  btn-primary" %>
   </div>
+
 <% end %>
