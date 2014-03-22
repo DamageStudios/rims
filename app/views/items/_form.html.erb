@@ -12,86 +12,80 @@
   <% end %>
 
 <div class="container">
-<div class="field">
 
-<div class="row">
-      <div class="span2"><b>Product Name:</b></div>
-      <div class="span1"><%= f.text_field :name %></div>
-</div>
+  <div class="row">
+    <div class="span2"><b>Product Name:</b></div>
+    <div class="span1"><%= f.text_field :name %></div>
+  </div>
 
-<div class="row">
-      <div class="span2"><b>Description:</b></div>
-      <div class="span1"><%= f.text_area :description, :rows => 10 %></div>
-</div>
+  <div class="row">
+    <div class="span2"><b>Description:</b></div>
+    <div class="span1"><%= f.text_area :description, :rows => 10 %></div>
+  </div>
 
-<div class="row">
-      <div class="span2"><b>Product Model Number:</b></div>
-      <div class="span1"><%= f.text_field :product_model_number %></div>
-</div>
+  <div class="row">
+    <div class="span2"><b>Product Model Number:</b></div>
+    <div class="span1"><%= f.text_field :product_model_number %></div>
+  </div>
 
-<div class="row">
-      <div class="span2"><b>Product Vendor:</b></div>
-      <div class="span1"><%= f.text_field :vendor_name %></div>
+  <div class="row">
+    <div class="span2"><b>Product Vendor:</b></div>
+    <div class="span1"><%= f.text_field :vendor_name %></div>
+  </div>
+
+  <div class="row">
+    <div class="span2"><b>Vendor Part Number:</b></div>
+    <div class="span1"><%= f.text_field :vendor_part_number %></div>
+  </div>
+
+  <div class="row">
+    <div class="span2"><b>Quantity:</b></div>
+    <div class="span1"><%= f.text_field :quantity %></div>
+  </div>
+
+  <div class="row">
+    <div class="span2"><b>Vendor URL:</b></div>
+    <div class="span1"><%= f.text_field :vendor_url %></div>
+  </div>
+
+  <div class="row">
+    <div class="span2"><b>Storage Location:</b></div>
+    <div class="span1"><%= f.text_field :location %></div>
+  </div>
+
+  <div class="row">
+    <div class="span2"><b>Unit Value:</b></div>
+    <div class="span1"><%= f.text_field :unit_value %></div>
+  </div>
+
+  <div class="row">
+    <div class="span2"><b>Category:</b></div>
+    <div class="span1"><%= f.select :category, [ 'Arduino', 'BeagleBone', 'Raspberry Pi' ] %></div>
+  </div>
+
+  <div class="row">
+  <div class="fileinput fileinput-new" data-provides="fileinput">
+    <div class="span2">
+      <div><span class="btn btn-primary btn-file">
+          <span class="fileinput-new">Select image</span>
+          <span class="fileinput-exists">Change</span>
+          <%= f.file_field :picture, :as => :file, :label => "upload a photo" %>
+          </span>
+            <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
+      </div>
     </div>
 
-<div class="row">
-      <div class="span2"><b>Vendor Part Number:</b></div>
-      <div class="span1"><%= f.text_field :vendor_part_number %></div>
+    <div class="span1">
+      <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
+      </div>
     </div>
-
-<div class="row">
-      <div class="span2"><b>Quantity:</b></div>
-      <div class="span1"><%= f.text_field :quantity %></div>
-      </div>
-
-<div class="row">
-      <div class="span2"><b>Vendor URL:</b></div>
-      <div class="span1"><%= f.text_field :vendor_url %></div>
-</div>
-
-<div class="row">
-      <div class="span2"><b>Storage Location:</b></div>
-      <div class="span1"><%= f.text_field :location %></div>
-      </div>
-
-<div class="row">
-      <div class="span2"><b>Unit Value:</b></div>
-      <div class="span1"><%= f.text_field :unit_value %></div>
-      </div>
-
-<div class="row">
-      <div class="span2"><b>Category:</b></div>
-      <div class="span1"><%= f.select :category, [ 'Arduino', 'BeagleBone', 'Raspberry Pi' ] %></div>
-      </div>
-
-<!-- images -->
-<div class="container">
-<div class="row">
-
-<div class="fileinput fileinput-new" data-provides="fileinput">
-
-<div class="span2">
-  <div>
-    <span class="btn btn-primary btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span>
-  <%= f.file_field :picture, :as => :file, :label => "upload a photo" %>
-  </span>
-    <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
   </div>
-</div>
-<div class="span1">
-  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
   </div>
-</div>
-
-</div>
-</div>
-<!-- images -->
-
 
 </div>
 
   <div class="actions">
     <%= f.submit "Create Item",  :class => "btn  btn-primary" %>
+    <%= link_to 'Cancel', items_path, :class => "btn  btn-danger" %>
   </div>
-
 <% end %>
