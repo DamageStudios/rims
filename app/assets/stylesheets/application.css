@@ -15,7 +15,8 @@
  /*
  *= require font-awesome
  */
- 
+*= require jasny-bootstrap
+
 body { padding-top: 60px; }
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle !important; border: none !important; }
