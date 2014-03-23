@@ -13,7 +13,9 @@
     <p><b>Location: </b><%= @item.location %></p>
 
     <p>
-      <%= link_to 'Edit', edit_item_path(@item) %> | <%= link_to 'Delete', @item, confirm: 'Are you sure?', method: :delete %> | <%= link_to 'Back', items_path %>
+      <%= link_to 'Edit', edit_item_path(@item), :class => "btn btn-primary" %>
+      <%= link_to 'Delete', @item, confirm: 'Are you sure?', method: :delete, :class => "btn btn-warning" %>
+      <%= link_to 'Cancel', items_path, :class => "btn btn-danger" %>
     </p>
 
 </div>
