@@ -120,6 +120,7 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     polyglot (0.3.4)
     protected_attributes (1.0.7)
       activemodel (>= 4.0.1, < 5.0)
@@ -235,6 +236,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mini_magick
+  pg
   protected_attributes
   rails (~> 4.0.3)
   role_model
