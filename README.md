@@ -37,6 +37,8 @@ Using Homebrew on OSX it's as easy as: `brew install imagemagick`
 Pagination is set at 5 items per page. This can be changed in `app/models/item.rb` just look for the line that says: `self.per_page = 5` and change it to whatever number of items you'd like it to be.
 
 ### Screenshots
+![alt text](https://raw.github.com/DamageStudios/rims/master/RIMS.png "RIMS Screenshot")
+
 ![alt text](https://raw.github.com/DamageStudios/rims/master/RIMS-1.png "RIMS Screenshot")
 
 ![alt text](https://raw.github.com/DamageStudios/rims/master/RIMS-2.png "RIMS Screenshot")
