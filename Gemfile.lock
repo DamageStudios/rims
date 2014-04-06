@@ -240,7 +240,7 @@ DEPENDENCIES
   rails (~> 4.0.3)
   role_model
   rspec-rails
-  sass-rails (~> 4.0.3)
+  sass-rails
   seed_dump
   sqlite3
   twitter-bootstrap-rails
