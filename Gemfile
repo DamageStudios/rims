@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.3'
 
 # Database adapters
-gem 'pg'
+group :production do
+  gem 'pg'
+end
 
 gem 'protected_attributes'
 
