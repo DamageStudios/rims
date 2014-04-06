@@ -72,3 +72,8 @@
 .pagination .next_page {
   margin-left: 1em;
 }
+
+.note{
+  font-size: 12px;
+  color: red;
+}
