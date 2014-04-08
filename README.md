@@ -38,7 +38,11 @@ Pagination is set at 5 items per page. This can be changed in `app/models/item.r
 
 ### Screenshots
 ![alt text](https://raw.githubusercontent.com/DamageStudios/rims/master/RIMS.png "RIMS Screenshot")
+
 ------
+
 ![alt text](https://raw.github.com/DamageStudios/rims/master/RIMS-1.png "RIMS Screenshot")
+
 ------
+
 ![alt text](https://raw.github.com/DamageStudios/rims/master/RIMS-2.png "RIMS Screenshot")
