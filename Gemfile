@@ -3,13 +3,8 @@ source 'https://rubygems.org'
 # Core gems
 gem 'rails', '~> 4.0.3'
 
-# Database adapters
-group :production do
-  gem 'pg'
-end
-
+gem 'sqlite3'
 gem 'protected_attributes'
-
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
@@ -34,7 +29,6 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'sqlite3'
 end
 
 group :test do
