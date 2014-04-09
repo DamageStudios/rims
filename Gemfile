@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Core gems
-gem 'rails', '~> 4.0.3'
+gem 'rails', '~> 4.0.4'
 
 gem 'sqlite3'
 gem 'protected_attributes'

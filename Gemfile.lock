@@ -234,7 +234,7 @@ DEPENDENCIES
   launchy
   mini_magick
   protected_attributes
-  rails (~> 4.0.3)
+  rails (~> 4.0.4)
   role_model
   rspec-rails
   sass-rails
