@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # Core gems
 gem 'rails'
-
 gem 'sqlite3'
 gem 'protected_attributes'
 gem 'carrierwave'
@@ -15,6 +14,7 @@ gem 'role_model'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'will_paginate', '~> 3.0'
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,8 +23,6 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
 end
-
-gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
