@@ -21,6 +21,14 @@
           </li>
           </ul>
 
+        <ul class="nav">
+          <li class="active">
+            <% if !current_user.nil? and current_user.admin? %>
+            <%=link_to "Users", users_path %>
+            <% end %>
+          </li>
+        </ul>
+
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="items">Account <span class="caret"></span></a>

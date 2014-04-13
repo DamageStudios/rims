@@ -5,4 +5,5 @@ Rims::Application.routes.draw do
   root :to => 'welcome#index'
   #root :to => redirect('/items')
   resources :items
+  resources :users
 end
