@@ -18,10 +18,16 @@ This project is currently in an early alpha stage. Code quality is improving con
 
 `rails s`
 
-This will install all the gem dependencies for you, create a local database, run the database migrations and seed the database with some default items. It will also create a user for you to login as. The credentials for this user are:
+This will install all the gem dependencies for you, create a local database, run the database migrations and seed the database with some default items. It will also create an admin and a regular user for you to login as. The credentials for this user are:
 
+**Admin User**
 ```
 username: admin@example.com
+password: changeme
+```
+**Regular User**
+```
+username: user@example.com
 password: changeme
 ```
 
