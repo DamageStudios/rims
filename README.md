@@ -52,3 +52,6 @@ Pagination is set at 5 items per page. This can be changed in `app/models/item.r
 ------
 
 ![alt text](https://raw.github.com/DamageStudios/rims/master/RIMS-2.png "RIMS Screenshot")
+
+### ToDo
+Add PG gem for installation into heroku
