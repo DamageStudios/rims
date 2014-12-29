@@ -1,5 +1,5 @@
 
-<form class="form-horizontal">
+<div class="form-horizontal">
 <%= form_for(@item) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -16,63 +16,63 @@
   <div class="form-group">
     <%= f.label :name, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :name, class: "form-control" %>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :description, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.text_area :description, class: "form-control" %>
+      <%= f.text_area :description, class: "form-control", :rows =>10 %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :product_model_number, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :product_model_number, class: "form-control" %>
+      <%= f.text_field :product_model_number, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :vendor_name, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :vendor_name, class: "form-control" %>
+      <%= f.text_field :vendor_name, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :vendor_part_number, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :vendor_part_number, class: "form-control" %>
+      <%= f.text_field :vendor_part_number, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :quantity, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :quantity, class: "form-control" %>
+      <%= f.text_field :quantity, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :vendor_url, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :vendor_url, class: "form-control" %>
+      <%= f.text_field :vendor_url, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :location, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :location, class: "form-control" %>
+      <%= f.text_field :location, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :unit_value, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.email_field :unit_value, class: "form-control" %>
+      <%= f.text_field :unit_value, class: "form-control" %>
     </div>
   </div>
 
@@ -91,4 +91,4 @@
   </div>
 
 <% end %>
-</form>
+</div>
