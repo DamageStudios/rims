@@ -8,7 +8,7 @@
 
   <div class="panel-body">
     <div class="row">
-      <table class="table">
+      <table class="table sortable">
         <th>Item Name</th>
         <th><center>Quantity</center></th>
         <th><center>Unit Value</center></th>
@@ -16,7 +16,7 @@
         <th><center>Vendor</center></th>
         <th><center>Location</center></th>
         <th><center>Category</center></th>
-        <th><center>Edit/Delete</center></th>
+        <th class="sorttable_nosort"><center>Edit/Delete</center></th>
 
         <% @items.each do |item| %>
         <tr>
