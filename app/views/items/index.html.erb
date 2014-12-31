@@ -34,6 +34,10 @@
       </table>
     </div>
 
+<div>
+  <b>Total Value of All Items: $<%= @items.map{|item| item.value}.reduce(0, :+,).round(2) %></b>
+</div>
+
     <center>
       <div class="pagination">
         <div class="page_info">
