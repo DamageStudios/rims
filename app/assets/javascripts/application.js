@@ -16,10 +16,15 @@
 //= require_tree .
 //= require jasny-bootstrap
 
-$(function() {
-  $("#items th a").on("click", function() {
+$(function sortInventory() {
+  $("#inventory th a, #inventory .pagination a").on("click", function() {
     alert("click");
-    $.getScript(this.href);
+    var url = $(this).attr('href');
+    $.ajax({
+      url: url,
+      dataType: "script",
+      success: sortInventory
+    });
     return false;
   });
 });
