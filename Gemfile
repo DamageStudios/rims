@@ -12,7 +12,6 @@ gem 'protected_attributes'
 gem 'pundit'
 gem 'rails'
 gem "seed_dump"
-gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
@@ -28,6 +27,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -36,4 +36,8 @@ group :test do
   gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
+end
+
+group :production do
+  gem 'pg'
 end
