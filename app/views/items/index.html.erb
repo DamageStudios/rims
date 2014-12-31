@@ -1,5 +1,4 @@
-
-<% @items = Item.paginate(:page => params[:page]) %>
+<% @items = Item.paginate(:page => params[:page]).order("#{params[:sort]} #{params[:direction]} ") %>
 
 <div class="panel panel-primary">
   <div class="panel-heading">
@@ -8,14 +7,14 @@
 
   <div class="panel-body">
     <div class="row">
-      <table class="table sortable">
-        <th>Item Name</th>
-        <th><center>Quantity</center></th>
-        <th><center>Unit Value</center></th>
-        <th><center>Total Value</center></th>
-        <th><center>Vendor</center></th>
-        <th><center>Location</center></th>
-        <th><center>Category</center></th>
+      <table class="table">
+        <th><%= sortable "name", "Item Name" %></th>
+        <th><center><%= sortable "quantity" %></center></th>
+        <th><center><%= sortable "unit_value" %></center></th>
+        <th><center><%= sortable "value", "Total Value" %></center></th>
+        <th><center><%= sortable "vendor_name", "Vendor" %></center></th>
+        <th><center><%= sortable "location" %></center></th>
+        <th><center><%= sortable "category" %></center></th>
         <th class="sorttable_nosort"><center>Edit/Delete</center></th>
 
         <% @items.each do |item| %>
