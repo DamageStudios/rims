@@ -6,6 +6,15 @@ self.per_page = 5
 
 belongs_to :item
 after_save :update_value
+
+def self.search(search)
+  if search
+    where('name LIKE ? OR description LIKE ?', "%#{search}%")
+  else
+    scoped
+  end
+end
+
 protected
 
   def update_value
