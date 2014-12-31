@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
+  validates :name,  presence: true, length: { maximum: 50 }
   validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
 
   def set_default_role
