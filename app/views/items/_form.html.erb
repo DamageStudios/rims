@@ -79,9 +79,28 @@
   <div class="form-group">
     <%= f.label :category, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.select(:category, options_for_select([['Arduino', 1], ['BeagleBone', 2],['Raspberry Pi', 3]]), {}, {class: "form-control"}) %>
+      <%= f.select(:category, options_for_select([['Arduino', 'Arduino'], ['Raspberry Pi', 'Raspberry Pi'],['BeagleBone', 'BeagleBone'],['Prototyping','Prototyping'],['Kits & Projects','Kits & Projects'],['Boards','Boards'],['LCDS & Displays','LCDS & Displays'],['LEDS','LEDS'],['Power','Power'],['Cables','Cables'],['Tools','Tools'],['Robotics','Robotics'],['CNC','CNC'],['Components & Parts','Components & Parts'],['Sensors','Sensors'],['3D Printing','3D Printing'],['Wireless','Wireless']]), {}, {class: "form-control"}) %>
     </div>
   </div>
+
+  <div class="row">
+  <div class="fileinput fileinput-new" data-provides="fileinput">
+  <div class="span2">
+  <div><span class="btn btn-primary btn-file">
+  <span class="fileinput-new">Select image</span>
+  <span class="fileinput-exists">Change</span>
+  <%= f.file_field :picture, :as => :file, :label => "upload a photo" %>
+</span>
+<a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
+</div>
+</div>
+
+<div class="span1">
+  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
+  </div>
+</div>
+</div>
+</div>
 
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-5">

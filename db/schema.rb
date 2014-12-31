@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140412010617) do
     t.integer  "quantity"
     t.decimal  "unit_value"
     t.decimal  "value"
+    t.string   "picture"
     t.text     "vendor_url"
     t.text     "category"
     t.string   "location"

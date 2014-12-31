@@ -1,21 +1,73 @@
 
-<div class="hero-unit">
-    <h3><%= @item.name %></h3>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @item.name %></h3>
+  </div>
 
-    <p><b>Description: </b><%= simple_format(@item.description) %></p>
-    <p><b>Product model number: </b><%= @item.product_model_number %></p>
-    <p><b>Vendor: </b><%= @item.vendor_name %></p>
-    <p><b>Vendor Part Number: </b><%= @item.vendor_part_number %></p>
-    <p><b>Vendor URL: </b><%= link_to(@item.vendor_url, @item.vendor_url, :target => "_blank") %></p>
-    <p><b>Quantity: </b><%= @item.quantity %></p>
-    <p><b>Unit Value: </b><%= number_to_currency(@item.unit_value, :unit => "$")  %></p>
-    <p><b>Total Value: </b><%= number_to_currency(@item.value, :unit => "$") %></p>
-    <p><b>Location: </b><%= @item.location %></p>
+  <div class="panel-body">
 
-    <p>
-      <%= link_to 'Edit', edit_item_path(@item), :class => "btn btn-primary" %>
-      <%= link_to 'Delete', @item, confirm: 'Are you sure?', method: :delete, :class => "btn btn-warning" %>
-      <%= link_to 'Cancel', items_path, :class => "btn btn-danger" %>
-    </p>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"><%= image_tag(@item.picture_url, :width => "65%") if @item.picture.present? %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Description</b></div>
+        <div class="col-md-8"><%= simple_format(@item.description) %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Product Model Number</b></div>
+        <div class="col-md-4"><%= @item.product_model_number %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Vendor</b></div>
+        <div class="col-md-4"><%= @item.vendor_name %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Vendor Part Number</b></div>
+        <div class="col-md-4"><%= @item.vendor_part_number %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Vendor URL</b></div>
+        <div class="col-md-4"><%= link_to(@item.vendor_url, @item.vendor_url, :target => "_blank") %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Quantity</b></div>
+        <div class="col-md-4"><%= @item.quantity %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Unit Value</b></div>
+        <div class="col-md-4"><%= number_to_currency(@item.unit_value, :unit => "$")%></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"><b>Total Value</b></div>
+        <div class="col-md-4"><%= number_to_currency(@item.value, :unit => "$") %></div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-2"><b>Location</b></div>
+          <div class="col-md-4"><%= @item.location %></div>
+        </div>
+<br>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <%= link_to 'Edit', edit_item_path(@item), :class => "btn btn-primary" %>
+            <%= link_to 'Delete', @item, confirm: 'Are you sure?', method: :delete, :class => "btn btn-warning" %>
+            <%= link_to 'Cancel', items_path, :class => "btn btn-danger" %>
+          </div>
+        </div>
+
+    </div>
+
 
 </div>

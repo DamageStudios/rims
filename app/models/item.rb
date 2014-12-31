@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
-  attr_accessible :description, :location, :name, :product_model_number, :vendor_part_number, :quantity, :unit_value, :vendor_url, :value, :vendor_name, :category
+  mount_uploader :picture, PictureUploader
+  attr_accessible :description, :location, :name, :picture, :product_model_number, :vendor_part_number, :quantity, :unit_value, :vendor_url, :value, :vendor_name, :category
 
 self.per_page = 5
 
