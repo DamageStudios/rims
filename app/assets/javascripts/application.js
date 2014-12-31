@@ -35,6 +35,12 @@ Licenced as X11: http://www.kryogenix.org/code/browser/licence.html
 This basically means: do what you want with it.
 */
 
+$(function() {
+  $("#inventory_search input").keyup(function() {
+    $.get($("#inventory_search").attr("action"), $("#inventory_search").serialize(), null, "script");
+    return false;
+  });
+});
 
 var stIsIE = /*@cc_on!@*/false;
 
