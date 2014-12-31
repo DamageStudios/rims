@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :validatable,:authentication_keys => [:login]
 
   attr_accessor :login       
-  attr_accessible :username, :name, :email, :password, :password_confirmation, 
+  attr_accessible :name, :username, :email, :password, :password_confirmation, 
                   :encrypted_password, :encrypted_password_confirmation, 
                   :reset_password_token, :reset_password_sent_at, :remember_created_at, 
                   :sign_in_count, :current_sign_in_at, :last_sign_in_at, 
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
   validates :name,  presence: true, length: { maximum: 50 }
-  validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
+  validates :username, presence: true, :uniqueness => { :case_sensitive => false }
 
   def set_default_role
     self.role ||= :user
