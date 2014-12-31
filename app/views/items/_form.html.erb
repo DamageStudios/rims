@@ -83,24 +83,27 @@
     </div>
   </div>
 
-  <div class="row">
+
   <div class="fileinput fileinput-new" data-provides="fileinput">
-  <div class="span2">
-  <div><span class="btn btn-primary btn-file">
-  <span class="fileinput-new">Select image</span>
-  <span class="fileinput-exists">Change</span>
-  <%= f.file_field :picture, :as => :file, :label => "upload a photo" %>
-</span>
-<a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-</div>
+    <div class="span2"  style="margin-left: 100px;">
+      <div>
+        <span class="btn btn-primary btn-file">
+          <span class="fileinput-new">Select image</span>
+          <span class="fileinput-exists">Change</span>
+            <%= f.file_field :picture, :as => :file, :label => "upload a photo" %>
+        </span>
+        <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
+      </div>
+
+
+    <div class="span1" style="margin-left: 185px; margin-top: -35px;">
+      <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 250px; height: 200px;">
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="span1">
-  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
-  </div>
-</div>
-</div>
-</div>
 
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-5">
