@@ -1,7 +1,11 @@
 
-<div class="jumbotron">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sign In</h3>
+  </div>
 
-  <h2>Sign In</h2>
+  <div class="panel-body">
+
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name),html: {class: 'form-horizontal'}) do |f| %>
 
 
