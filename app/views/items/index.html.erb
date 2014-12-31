@@ -1,4 +1,4 @@
-<%= form_tag products_path, :method => 'get', :id => "inventory_search" do %>
+<%= form_tag items_path, :method => 'get', :id => "inventory_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
