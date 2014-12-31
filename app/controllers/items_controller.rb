@@ -5,8 +5,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
-    respond_with(@items)
+    @items = Item.order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /items/1

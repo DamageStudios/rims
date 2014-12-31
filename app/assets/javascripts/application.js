@@ -15,3 +15,11 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require jasny-bootstrap
+
+$(function() {
+  $("#items th a").on("click", function() {
+    alert("click");
+    $.getScript(this.href);
+    return false;
+  });
+});
