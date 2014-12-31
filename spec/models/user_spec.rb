@@ -8,6 +8,9 @@ describe User do
 	it "is invalid without a email" do
 		FactoryGirl.build(:user, email: nil).should_not be_valid
 	end
+  it "is invalid without a username" do
+    FactoryGirl.build(:user, username: nil).should_not be_valid
+  end
 	it "is invalid without a password"  do
 		FactoryGirl.build(:user, password: nil).should_not be_valid
 	end
@@ -15,6 +18,8 @@ describe User do
 # nkotb
 before(:each) do
     @attr = {
+      :name => "User",
+      :username => "user",
       :email => "user@example.com",
       :password => "changeme",
       :password_confirmation => "changeme"
@@ -28,6 +33,17 @@ before(:each) do
   it "should require an email address" do
     no_email_user = User.new(@attr.merge(:email => ""))
     no_email_user.should_not be_valid
+  end
+
+  it "should require a username" do
+    no_username_user = User.new(@attr.merge(:username => ""))
+    no_username_user.should_not be_valid
+  end
+
+  it "should reject duplicate usernames" do
+    User.create!(@attr)
+    user_with_duplicate_username = User.new(@attr)
+    user_with_duplicate_username.should_not be_valid
   end
 
   it "should accept valid email addresses" do
