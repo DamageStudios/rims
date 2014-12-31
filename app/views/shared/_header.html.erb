@@ -28,10 +28,10 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="items">Account <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="">Account <span class="items"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><% if user_signed_in? %>
-              <strong>&nbsp;<%= current_user.email %></strong>
+              <strong>&nbsp<%= current_user.name %></strong>
               <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
               <% else %>

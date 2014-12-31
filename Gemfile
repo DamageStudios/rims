@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
+ruby "2.1.5"
 
 # Core gems
 gem 'rails'
-gem 'sqlite3'
 gem 'protected_attributes'
 gem 'carrierwave'
 gem 'mini_magick'
@@ -25,9 +25,14 @@ group :assets do
   gem 'uglifier'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 
 group :test do
