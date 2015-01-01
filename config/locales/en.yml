@@ -3,3 +3,10 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      item:
+        zero:  items
+        one:   item
+        few:   items
+        other: items

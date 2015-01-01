@@ -37,3 +37,17 @@
   font-size: 12px;
   color: red;
 }
+
+tfoot {
+  background-color: #D9EDF7;
+  color: #000000;
+  border-top: 2px solid #428BCA;
+  border-bottom: 2px solid #428BCA;
+}
+
+thead {
+  background-color: #D9EDF7;
+  color: #000000;
+  border-top: 2px solid #428BCA;
+  border-bottom: 2px solid #428BCA;
+}

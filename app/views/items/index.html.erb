@@ -9,7 +9,9 @@
   <div class="panel-body">
     <div class="row">
       <table class="table sortable">
+        <thead>
         <th>Item Name</th>
+        <th><center>Model #</center></th>
         <th><center>Quantity</center></th>
         <th><center>Unit Value</center></th>
         <th><center>Total Value</center></th>
@@ -17,10 +19,12 @@
         <th><center>Location</center></th>
         <th><center>Category</center></th>
         <th class="sorttable_nosort"><center>Edit/Delete</center></th>
+        </thead>
 
         <% @items.each do |item| %>
         <tr>
           <td><%= link_to item.name, item %></td>
+          <td><center><%= item.product_model_number %></center></td>
           <td><center><%= item.quantity %></center></td>
           <td><center><%= number_to_currency(item.unit_value, :unit => "$") %></center></td>
           <td><center><%= number_to_currency(item.value, :unit => "$") %></center></td>
@@ -31,6 +35,21 @@
           </td>
         </tr>
         <% end -%>
+
+        <tfoot>
+          <tr>
+            <td><b>Totals</b></td>
+            <td></td>
+            <td><center><%= @items.map{|item| item.quantity}.reduce(0, :+,) %></center></td>
+            <td></td>
+            <td><center><%= number_to_currency(@items.map{|item| item.value}.reduce(0, :+,))%></center></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+        </tfoot>
+
       </table>
     </div>
 
