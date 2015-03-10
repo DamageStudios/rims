@@ -65,7 +65,7 @@
   <div class="form-group">
     <%= f.label :location, class: "col-sm-3 control-label" %>
     <div class="col-sm-5">
-      <%= f.text_field :location, class: "form-control" %>
+      <%= collection_select(:item, :location_id, Location.all, :id, :name,  {:selected => @item.location(:id), prompt: @item.location(:id) }) %>
     </div>
   </div>
 
