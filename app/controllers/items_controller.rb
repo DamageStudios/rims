@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
   # GET /items/new
   # GET /items/new.json
   def new
+
     @item = Item.new
 
     respond_to do |format|
@@ -38,6 +39,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
+
     @item = Item.new(params[:item])
 
     respond_to do |format|

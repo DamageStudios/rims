@@ -16,6 +16,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem 'pundit'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
