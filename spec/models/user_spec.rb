@@ -5,6 +5,12 @@ describe User do
 	it "has a valid factory" do
 		FactoryGirl.create(:user).should be_valid
 	end
+  it "is invalid without a name" do
+    FactoryGirl.build(:user, name: nil).should_not be_valid
+  end
+  it "is invalid without a username" do
+    FactoryGirl.build(:user, username: nil).should_not be_valid
+  end
 	it "is invalid without a email" do
 		FactoryGirl.build(:user, email: nil).should_not be_valid
 	end
@@ -15,6 +21,8 @@ describe User do
 # nkotb
 before(:each) do
     @attr = {
+      :name => "User",
+      :username => "user",
       :email => "user@example.com",
       :password => "changeme",
       :password_confirmation => "changeme"
@@ -23,6 +31,27 @@ before(:each) do
 
   it "should create a new instance given a valid attribute" do
     User.create!(@attr)
+  end
+
+  it "should require a name" do
+    no_name_user = User.new(@attr.merge(:name => ""))
+    no_name_user.should_not be_valid
+  end
+
+  it "should reject names longer than 50 characters" do
+    user_with_long_name = User.new(@attr.merge(:name => "a" * 51))
+    user_with_long_name.should_not be_valid
+  end
+
+  it "should require a username" do
+    no_username_user = User.new(@attr.merge(:username => ""))
+    no_username_user.should_not be_valid
+  end
+
+  it "should reject duplicate usernames" do
+    User.create!(@attr)
+    user_with_duplicate_username = User.new(@attr)
+    user_with_duplicate_username.should_not be_valid
   end
 
   it "should require an email address" do
