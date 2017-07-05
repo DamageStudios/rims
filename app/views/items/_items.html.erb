@@ -2,6 +2,7 @@
 <%= hidden_field_tag :sort, params[:sort] %>
 
 <div class="row">
+<<<<<<< HEAD
   <table class="table">
   <tr>
     <th><%= sortable "name", "Item Name" %></th>
@@ -13,6 +14,18 @@
     <th><center><%= sortable "category" %></center></th>
     <th class="sorttable_nosort"><center>Edit/Delete</center></th>
   </tr>
+=======
+  <table class="table sortable">
+    <th>Item Name</th>
+    <th><center>Quantity</center></th>
+    <th><center>Unit Value</center></th>
+    <th><center>Total Value</center></th>
+    <th><center>Vendor</center></th>
+    <th><center>Location</center></th>
+    <th><center>Category</center></th>
+    <th class="sorttable_nosort"><center>Edit/Delete</center></th>
+
+>>>>>>> 6d228d2a7204d6087ec70318d31460554d6020c6
     <% @items.each do |item| %>
     <tr>
       <td><%= link_to item.name, item %></td>
@@ -36,4 +49,8 @@
     </div>
     <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
   </div>
+<<<<<<< HEAD
 </center>
+=======
+</center>
+>>>>>>> 6d228d2a7204d6087ec70318d31460554d6020c6

@@ -16,13 +16,49 @@
 //= require_tree .
 //= require jasny-bootstrap
 
-$(function sortInventory() {
-  $("#inventory th a, #inventory .pagination a").on("click", function() {
-    var url = $(this).attr('href');
-    $.ajax({
-      url: url,
-      dataType: "script",
-      success: sortInventory
+/*
+SortTable
+version 2
+7th April 2007
+Stuart Langridge, http://www.kryogenix.org/code/browser/sorttable/
+
+Instructions:
+Download this file
+Add <script src="sorttable.js"></script> to your HTML
+Add class="sortable" to any table you'd like to make sortable
+Click on the headers to sort
+
+Thanks to many, many people for contributions and suggestions.
+Licenced as X11: http://www.kryogenix.org/code/browser/licence.html
+This basically means: do what you want with it.
+*/
+
+$(function() {
+  $("#inventory_search input").keyup(function() {
+    $.get($("#inventory_search").attr("action"), $("#inventory_search").serialize(), null, "script");
+    return false;
+  });
+});
+
+var stIsIE = /*@cc_on!@*/false;
+
+sorttable = {
+  init: function() {
+    // quit if this function has already been called
+    if (arguments.callee.done) return;
+    // flag this function so we don't do the same thing twice
+    arguments.callee.done = true;
+    // kill the timer
+    if (_timer) clearInterval(_timer);
+
+    if (!document.createElement || !document.getElementsByTagName) return;
+
+    sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
+
+    forEach(document.getElementsByTagName('table'), function(table) {
+      if (table.className.search(/\bsortable\b/) != -1) {
+        sorttable.makeSortable(table);
+      }
     });
     return false;
   });

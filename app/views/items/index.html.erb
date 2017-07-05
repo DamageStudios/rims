@@ -4,6 +4,12 @@
   </div>
 
   <div class="panel-body">
+  <%= form_tag items_path, :method => 'get', :id => "inventory_search" do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
     <div id="inventory"><%= render 'items' %></div>
+  <% end %>
   </div>
 </div>
