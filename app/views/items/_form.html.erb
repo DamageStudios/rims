@@ -1,0 +1,116 @@
+
+<div class="form-horizontal">
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h3><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h3>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_area :description, class: "form-control", :rows =>10 %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :product_model_number, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :product_model_number, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vendor_name, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :vendor_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vendor_part_number, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :vendor_part_number, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :quantity, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :quantity, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vendor_url, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :vendor_url, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :location, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :unit_value, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :unit_value, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, class: "col-sm-3 control-label" %>
+    <div class="col-sm-5">
+      <%= f.select(:category, options_for_select([['Arduino', 'Arduino'], ['Raspberry Pi', 'Raspberry Pi'],['BeagleBone', 'BeagleBone'],['Prototyping','Prototyping'],['Kits & Projects','Kits & Projects'],['Boards','Boards'],['LCDS & Displays','LCDS & Displays'],['LEDS','LEDS'],['Power','Power'],['Cables','Cables'],['Tools','Tools'],['Robotics','Robotics'],['CNC','CNC'],['Components & Parts','Components & Parts'],['Sensors','Sensors'],['3D Printing','3D Printing'],['Wireless','Wireless']]), {}, {class: "form-control"}) %>
+    </div>
+  </div>
+
+
+  <div class="fileinput fileinput-new" data-provides="fileinput">
+    <div class="span2"  style="margin-left: 100px;">
+      <div>
+        <span class="btn btn-primary btn-file">
+          <span class="fileinput-new">Select image</span>
+          <span class="fileinput-exists">Change</span>
+            <%= f.file_field :picture, :as => :file, :label => "upload a photo" %>
+        </span>
+        <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
+      </div>
+
+
+    <div class="span1" style="margin-left: 185px; margin-top: -35px;">
+      <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 250px; height: 200px;">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-5">
+      <%= f.submit "Create Item", class: "btn btn-primary" %>
+      <%= link_to 'Cancel', items_path, :class => "btn btn-danger" %>
+    </div>
+  </div>
+
+<% end %>
+</div>

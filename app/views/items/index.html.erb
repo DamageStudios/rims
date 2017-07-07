@@ -1,0 +1,66 @@
+
+<% @items = Item.paginate(:page => params[:page]) %>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Items in Inventory</h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <table class="table sortable">
+        <thead>
+        <th>Item Name</th>
+        <th><center>Model #</center></th>
+        <th><center>Quantity</center></th>
+        <th><center>Unit Value</center></th>
+        <th><center>Total Value</center></th>
+        <th><center>Vendor</center></th>
+        <th><center>Location</center></th>
+        <th><center>Category</center></th>
+        <th class="sorttable_nosort"><center>Edit/Delete</center></th>
+        </thead>
+
+        <% @items.each do |item| %>
+        <tr>
+          <td><%= link_to item.name, item %></td>
+          <td><center><%= item.product_model_number %></center></td>
+          <td><center><%= item.quantity %></center></td>
+          <td><center><%= number_to_currency(item.unit_value, :unit => "$") %></center></td>
+          <td><center><%= number_to_currency(item.value, :unit => "$") %></center></td>
+          <td><center><%= item.vendor_name %></center></td>
+          <td><center><%= item.location %></center></td>
+          <td><center><%= item.category %></center></td>
+          <td><center><%= link_to '', edit_item_path(item), :class=>"fa fa-edit" %> |  <%= link_to content_tag(:i,nil, :class=>"fa fa-trash-o"), item, data: {confirm: 'Are you sure you want to delete this item?'}, method: :delete %></center>
+          </td>
+        </tr>
+        <% end -%>
+
+        <tfoot>
+          <tr>
+            <td><b>Totals</b></td>
+            <td></td>
+            <td><center><%= @items.map{|item| item.quantity}.reduce(0, :+,) %></center></td>
+            <td></td>
+            <td><center><%= number_to_currency(@items.map{|item| item.value}.reduce(0, :+,))%></center></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+        </tfoot>
+
+      </table>
+    </div>
+
+    <center>
+      <div class="pagination">
+        <div class="page_info">
+          <%= page_entries_info @items %>
+        </div>
+        <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
+      </div>
+    </center>
+
+  </div>
+</div>

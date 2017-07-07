@@ -1,0 +1,39 @@
+<h3>User Details</h3>
+
+<div class="container">
+
+  <div class="row">
+    <div class="span2"><b>Email:</b></div>
+    <div class="span3"><%= @user.email if @user.email %></div>
+  </div>
+
+<div class="row">
+  <div class="span2"><b>Sign In Count:</b></div>
+  <div class="span3"><%= @user.sign_in_count%></div>
+</div>
+
+<div class="row">
+  <div class="span2"><b>Last IP:</b></div>
+  <div class="span3"><%= @user.last_sign_in_ip%></div>
+</div>
+
+<div class="row">
+  <div class="span2"><b>Last Sign In:</b></div>
+  <div class="span3"><%= @user.last_sign_in_at%></div>
+</div>
+
+<div class="row">
+  <div class="span2"><b>User Created:</b></div>
+  <div class="span3"><%= @user.created_at%></div>
+</div>
+
+<div class="row">
+  <div class="span2"><b>User Updated:</b></div>
+  <div class="span3"><%= @user.updated_at%></div>
+</div>
+
+</div>
+<br />
+<%= link_to 'Back', users_path, :class => "btn btn-danger" %>
+
+<br /><br />
