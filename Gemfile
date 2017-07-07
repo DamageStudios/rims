@@ -17,6 +17,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem 'pundit'
+gem 'i18n'
 
 gem 'capistrano'
 gem 'capistrano-rails'

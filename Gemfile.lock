@@ -303,6 +303,7 @@ DEPENDENCIES
   faker
   font-awesome-rails
   guard-rspec
+  i18n
   jquery-rails
   launchy
   mini_magick
