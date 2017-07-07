@@ -22,6 +22,7 @@ gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-passenger'
 gem 'capistrano-rvm'
+gem 'capistrano-faster-assets'
 
 # Gems used only for assets and not required
 # in production environments by default.
