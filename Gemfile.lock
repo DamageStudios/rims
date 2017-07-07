@@ -300,7 +300,7 @@ DEPENDENCIES
   faker
   font-awesome-rails
   guard-rspec
-  i18n
+  i18n (~> 0.8.4)
   jquery-rails
   launchy
   mini_magick
