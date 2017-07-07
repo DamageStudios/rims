@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 # Core gems
 gem 'rails'
-gem 'sqlite3'
+gem 'pg'
+#gem 'sqlite3'
 gem 'protected_attributes'
 gem 'carrierwave'
 gem 'mini_magick'
@@ -16,6 +17,11 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem 'pundit'
+
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
+gem 'capistrano-rvm'
 
 # Gems used only for assets and not required
 # in production environments by default.
