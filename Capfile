@@ -31,7 +31,7 @@ require "capistrano-rails"
 require "capistrano-passenger"
 require "capistrano-rvm"
 require 'capistrano/rails/assets'
-require 'capistrano/faster_assets'
+#require 'capistrano/faster_assets'
 
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
