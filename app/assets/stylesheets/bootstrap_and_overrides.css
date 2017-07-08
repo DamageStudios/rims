@@ -38,6 +38,7 @@
   color: red;
 }
 
+/*
 tfoot {
   background-color: #D9EDF7;
   color: #000000;
@@ -46,8 +47,9 @@ tfoot {
 }
 
 thead {
-  background-color: #D9EDF7;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   border-top: 2px solid #428BCA;
   border-bottom: 2px solid #428BCA;
 }
+*/
