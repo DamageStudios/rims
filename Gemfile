@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Core gems
 gem 'rails'
-gem 'pg'
+gem 'pg', '~> 1.5'
 #gem 'sqlite3'
 gem 'protected_attributes'
 gem 'carrierwave'
