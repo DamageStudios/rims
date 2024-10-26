@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Core gems
-gem "rails", ">= 2.3.3"
-gem 'pg', '~> 1.5'
+gem "rails"
+gem 'pg'
 #gem 'sqlite3'
 gem 'protected_attributes'
 gem 'carrierwave'
@@ -13,13 +13,11 @@ gem 'coveralls'
 gem 'cancan'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem 'pundit'
-
-gem 'i18n', '~> 0.8.4'
-
+gem 'i18n'
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-passenger'
